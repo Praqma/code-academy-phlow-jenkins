@@ -9,7 +9,7 @@ if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
   PARAMS="-master http://jmaster:8080"
 
   # Set default number of executors (2 by default)
-  PARAMS="$PARAMS -executors ${NUM_OF_EXECUTORS:-2}"
+  PARAMS="$PARAMS -executors ${NUM_OF_EXECUTORS:-10}"
 
   # Set labels to slave
   PARAMS="$PARAMS -labels \"linux\" -labels \"alpine\" -labels \"3.3\" -labels \"java\" -labels \"docker\" -labels \"swarm\" -labels \"utility-slave\""
