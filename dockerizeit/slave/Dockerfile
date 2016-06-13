@@ -17,7 +17,7 @@ RUN apk update && apk add curl && curl -o docker-1.11.0.tgz https://get.docker.c
 RUN apk update && apk add git curl openssh bash
 
 # install docker compose and other python deps
-RUN apk update && apk add py-pip && pip install docker-compose==1.7 docopt==0.6.2 pyyaml==3.11
+RUN apk update && apk add py-pip && pip install docker-compose==1.7 docopt==0.6.2 pyyaml==3.11 pytest==2.8.7
 
 RUN curl --create-dirs -sSLo /usr/share/jenkins/swarm-client-$JENKINS_SWARM_VERSION-jar-with-dependencies.jar http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/$JENKINS_SWARM_VERSION/swarm-client-$JENKINS_SWARM_VERSION-jar-with-dependencies.jar \
   && chmod 755 /usr/share/jenkins
